@@ -12,8 +12,7 @@ const styles = StyleSheet.create({
   heading1: {
     fontSize: 32,
     lineHeight: 40,
-    fontWeight: "400",
-    fontFamily: "NotoSans-ExtraBoldItalic",
+    fontFamily: "Mynerve-Regular",
   },
   heading2: { fontSize: 16, lineHeight: 24, fontWeight: "400" },
   heading3: { fontSize: 28, lineHeight: 36, fontWeight: "500" },
