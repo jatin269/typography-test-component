@@ -1,16 +1,13 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 
-function index({ type = "m", text, textStyle, ...rest }) {
+export default function index({ type = "m", text, textStyle, ...rest }) {
   return (
     <Text allowFontScaling={false} {...rest} style={[styles[type], textStyle]}>
       {text}
     </Text>
   );
 }
-
-export default index;
-
 const styles = StyleSheet.create({
   heading1: {
     fontSize: 32,
