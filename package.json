@@ -1,0 +1,23 @@
+{
+  "name": "design-system-typography-demo",
+  "version": "1.0.1",
+  "description": "this is demo for DS typo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatin269/typography-test-component.git"
+  },
+  "keywords": [
+    "demo",
+    "typography"
+  ],
+  "author": "jatin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jatin269/typography-test-component/issues"
+  },
+  "homepage": "https://github.com/jatin269/typography-test-component#readme"
+}
