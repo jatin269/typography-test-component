@@ -1,72 +1,45 @@
 import React from "react";
 import { Text, StyleSheet } from "react-native";
 
-const fontFamily = {
-  HI: {
-    bold: "NotoSansDevanagari-Bold",
-    regular: "Mynerve-Regular",
-    medium: "NotoSansDevanagari-ExtraLight",
-    semiBold: "NotoSansDevanagari-Thin",
-  },
-  EN: {
-    bold: "Babylonica-Regular",
-    regular: "NotoSansDevanagari-Thin",
-    medium: "NotoSansDevanagari-Bold",
-    semiBold: "",
-  },
-  KN: {
-    bold: "",
-    regular: "",
-    medium: "",
-    semiBold: "",
-  },
-  MR: {
-    bold: "",
-    regular: "",
-    medium: "",
-    semiBold: "",
-  },
-};
-
 export default function index({
   type = "m",
   text,
   textStyle,
-  language,
+  fontFamilyL,
   ...rest
 }) {
-  const fontFamilyLang = language || "EN";
   return (
     <Text
       allowFontScaling={false}
       {...rest}
-      style={[styles(fontFamilyLang)[type], textStyle]}
+      style={[styles(fontFamilyL)[type], textStyle]}
     >
       {text}
     </Text>
   );
 }
-const styles = (fontFamilyLang) =>
+const styles = (fontFamilyL) =>
   StyleSheet.create({
     heading1: {
       fontSize: 32,
       lineHeight: 40,
-      fontFamily: fontFamily[fontFamilyLang].bold,
+      fontFamily: fontFamilyL.bold || "Mynerve-Regular",
     },
+
     heading2: {
       fontSize: 16,
       lineHeight: 24,
-      fontFamily: fontFamily[fontFamilyLang].regular,
+      fontFamily: fontFamilyL.regular || "Mynerve-Regular",
     },
     heading3: {
       fontSize: 28,
       lineHeight: 36,
-      fontFamily: fontFamily[fontFamilyLang].semiBold,
+      fontFamily: fontFamilyL.semiBold || "Mynerve-Regular",
     },
     heading4: {
       fontSize: 24,
       lineHeight: 32,
-      fontFamily: fontFamily[fontFamilyLang].medium,
+      fontFamily: fontFamilyL.medium || "Mynerve-Regular",
     },
     heading5: { fontSize: 20, lineHeight: 28, fontWeight: "600" },
     heading6: { fontSize: 18, lineHeight: 26, fontWeight: "600" },
